@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-box">
+      <div class="header">
+        <h2>Todo</h2>
+        <div class="theme" id="theme"></div>
+      </div>
+      <div class="todo-app" id="todo">
+        <div class="task-row">
+          <div class="check-box">
+          </div>
+          <input type="text" id="input-box" placeholder="Create a new todo...">
+        </div>
+
+        <div class="list-container">
+
+        <li class="list-item active" draggable="true" data-category="ongoing">
+          Task 1
+          <span class="close-btn"><img src="images/icon-cross.svg"></span>
+        </li>
+        <li class="list-item checked" draggable="true" data-category="done">
+          Task 2
+          <span class="close-btn"><img src="images/icon-cross.svg"></span>
+        </li>        
+        </div>
+
+        <div class="buttons-container">
+
+          <p><span class="todo-number">2 items</span> left</p>
+          <div class="buttons choices">
+            <a class='filter-btn clicked' data-filter="all">All</a>
+            <a class='filter-btn' data-filter="ongoing">Active</a>
+            <a class='filter-btn' data-filter="done">Completed</a>
+          </div>
+          
+          <a class='filter-btn' id="delete">Clear Completed</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <p>Drag and drop to reorder list</p>
+    </div>
+  </div>
+
+
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
+    integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
